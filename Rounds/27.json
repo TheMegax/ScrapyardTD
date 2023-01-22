@@ -1,0 +1,20 @@
+[
+	{
+		"time": 0.0,
+		"type": "JET",
+		"intervalseconds": 0.4,
+		"quantity": 10
+	},
+	{
+		"time": 8.0,
+		"type": "BULKY",
+		"intervalseconds": 1,
+		"quantity": 30
+	},
+	{
+		"time": 16.0,
+		"type": "JET",
+		"intervalseconds": 0.4,
+		"quantity": 10
+	}
+]

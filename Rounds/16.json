@@ -1,0 +1,14 @@
+[
+	{
+		"time": 0.0,
+		"type": "TROOPER",
+		"intervalseconds": 1.5,
+		"quantity": 10
+	},
+	{
+		"time": 0.0,
+		"type": "HELI",
+		"intervalseconds": 0.5,
+		"quantity": 25
+	}
+]

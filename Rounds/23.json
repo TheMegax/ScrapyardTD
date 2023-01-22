@@ -1,0 +1,26 @@
+[
+	{
+		"time": 0.0,
+		"type": "HELI",
+		"intervalseconds": 5,
+		"quantity": 4
+	},
+	{
+		"time": 7.0,
+		"type": "TROOPER",
+		"intervalseconds": 1,
+		"quantity": 12
+	},
+	{
+		"time": 14.0,
+		"type": "JET",
+		"intervalseconds": 5,
+		"quantity": 4
+	},
+	{
+		"time": 20.0,
+		"type": "SWARMER",
+		"intervalseconds": 0.1,
+		"quantity": 10
+	},
+]

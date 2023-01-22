@@ -1,0 +1,14 @@
+[
+	{
+		"time": 0.0,
+		"type": "DUPPER",
+		"intervalseconds": 0.1,
+		"quantity": 4
+	},
+	{
+		"time": 0.0,
+		"type": "JET",
+		"intervalseconds": 2,
+		"quantity": 20
+	}
+]

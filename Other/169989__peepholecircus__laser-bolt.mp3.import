@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/169989__peepholecircus__laser-bolt.mp3-72451ee8dd75bb6a22da4279ef169159.mp3str"
+
+[deps]
+
+source_file="res://Other/169989__peepholecircus__laser-bolt.mp3"
+dest_files=[ "res://.import/169989__peepholecircus__laser-bolt.mp3-72451ee8dd75bb6a22da4279ef169159.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

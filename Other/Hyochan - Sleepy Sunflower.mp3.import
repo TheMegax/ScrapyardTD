@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Hyochan - Sleepy Sunflower.mp3-97c2d06670fb99dc989bff0328a59a66.mp3str"
+
+[deps]
+
+source_file="res://Other/Hyochan - Sleepy Sunflower.mp3"
+dest_files=[ "res://.import/Hyochan - Sleepy Sunflower.mp3-97c2d06670fb99dc989bff0328a59a66.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,32 @@
+[
+	{
+		"time": 0.0,
+		"type": "TROOPER",
+		"intervalseconds": 1,
+		"quantity": 30
+	},
+	{
+		"time": 5.0,
+		"type": "BULKY",
+		"intervalseconds": 10,
+		"quantity": 5
+	},
+	{
+		"time": 6.0,
+		"type": "SWARMER",
+		"intervalseconds": 0.1,
+		"quantity": 15
+	},
+	{
+		"time": 16.0,
+		"type": "SWARMER",
+		"intervalseconds": 0.1,
+		"quantity": 15
+	},
+	{
+		"time": 26.0,
+		"type": "SWARMER",
+		"intervalseconds": 0.1,
+		"quantity": 15
+	},
+]

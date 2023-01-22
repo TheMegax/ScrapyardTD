@@ -1,0 +1,20 @@
+[
+	{
+		"time": 0.0,
+		"type": "SWARMER",
+		"intervalseconds": 0.1,
+		"quantity": 15
+	},
+	{
+		"time": 1.0,
+		"type": "BULKY",
+		"intervalseconds": 2,
+		"quantity": 3
+	},
+	{
+		"time": 6.0,
+		"type": "SWARMER",
+		"intervalseconds": 0.1,
+		"quantity": 15
+	},
+]

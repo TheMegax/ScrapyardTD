@@ -1,0 +1,38 @@
+[
+	{
+		"time": 0.0,
+		"type": "TROOPER",
+		"intervalseconds": 0.1,
+		"quantity": 20
+	},
+	{
+		"time": 6.0,
+		"type": "SWARMER",
+		"intervalseconds": 0.1,
+		"quantity": 20
+	},
+	{
+		"time": 12.0,
+		"type": "HELI",
+		"intervalseconds": 0.1,
+		"quantity": 20
+	},
+	{
+		"time": 18.0,
+		"type": "BULKY",
+		"intervalseconds": 0.1,
+		"quantity": 20
+	},
+	{
+		"time": 24.0,
+		"type": "JET",
+		"intervalseconds": 0.1,
+		"quantity": 20
+	},
+	{
+		"time": 30.0,
+		"type": "DUPPER",
+		"intervalseconds": 0.1,
+		"quantity": 20
+	}
+]

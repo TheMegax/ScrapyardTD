@@ -1,0 +1,14 @@
+[
+	{
+		"time": 0.0,
+		"type": "HELI",
+		"intervalseconds": 5,
+		"quantity": 3
+	},
+	{
+		"time": 6.0,
+		"type": "SWARMER",
+		"intervalseconds": 0.2,
+		"quantity": 30
+	}
+]

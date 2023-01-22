@@ -1,0 +1,14 @@
+[
+	{
+		"time": 0.0,
+		"type": "DUPPER",
+		"intervalseconds": 1,
+		"quantity": 1
+	},
+	{
+		"time": 5.0,
+		"type": "BULKY",
+		"intervalseconds": 1,
+		"quantity": 10
+	},
+]
