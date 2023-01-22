@@ -1,0 +1,69 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Font/Curse Casual.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Towers/SlasherIcon.png" type="Texture" id=2]
+[ext_resource path="res://DragTower.gd" type="Script" id=3]
+[ext_resource path="res://Shaders/offsetshadow.shader" type="Shader" id=4]
+
+[sub_resource type="Theme" id=1]
+
+[sub_resource type="DynamicFont" id=2]
+size = 22
+outline_size = 3
+outline_color = Color( 0.160784, 0.160784, 0.160784, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = ExtResource( 4 )
+shader_param/offset = Vector2( 1, 1 )
+shader_param/modulate = Color( 0.203922, 0.203922, 0.203922, 0.666667 )
+
+[node name="CenterContainer" type="CenterContainer"]
+margin_top = 3.0
+margin_right = 100.0
+margin_bottom = 3.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 5.0
+margin_right = 95.0
+margin_bottom = 150.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+alignment = 1
+
+[node name="TowerTitle" type="Label" parent="VBoxContainer"]
+margin_right = 90.0
+margin_bottom = 26.0
+theme = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
+text = "TITLE"
+align = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+margin_top = 30.0
+margin_right = 90.0
+margin_bottom = 120.0
+script = ExtResource( 3 )
+
+[node name="TowerImage" type="TextureRect" parent="VBoxContainer/CenterContainer"]
+material = SubResource( 3 )
+margin_right = 90.0
+margin_bottom = 90.0
+rect_min_size = Vector2( 90, 90 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 2 )
+stretch_mode = 7
+
+[node name="TowerPrice" type="Label" parent="VBoxContainer"]
+margin_top = 124.0
+margin_right = 90.0
+margin_bottom = 150.0
+theme = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
+text = "PRICE"
+align = 1
+
+[connection signal="gui_input" from="VBoxContainer/CenterContainer" to="VBoxContainer/CenterContainer" method="_on_gui_input"]
+[connection signal="mouse_entered" from="VBoxContainer/CenterContainer" to="VBoxContainer/CenterContainer" method="_on_CenterContainer_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/CenterContainer" to="VBoxContainer/CenterContainer" method="_on_CenterContainer_mouse_exited"]

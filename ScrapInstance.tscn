@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ScrapInstance.gd" type="Script" id=1]
+[ext_resource path="res://Gui/Scrap0.png" type="Texture" id=2]
+
+[node name="ScrapInstance" type="Node2D"]
+scale = Vector2( 4, 4 )
+z_index = 10
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="Tween" type="Tween" parent="."]

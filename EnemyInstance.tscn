@@ -1,0 +1,98 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://EnemyInstance.gd" type="Script" id=1]
+[ext_resource path="res://Enemies/swarmer2.png" type="Texture" id=2]
+[ext_resource path="res://EnemyArea.gd" type="Script" id=3]
+[ext_resource path="res://Enemies/swarmer4.png" type="Texture" id=4]
+[ext_resource path="res://Enemies/swarmer3.png" type="Texture" id=5]
+[ext_resource path="res://Enemies/swarmer1.png" type="Texture" id=6]
+[ext_resource path="res://Other/health_under.png" type="Texture" id=7]
+[ext_resource path="res://Other/health_over.png" type="Texture" id=8]
+[ext_resource path="res://Enemies/heli2.png" type="Texture" id=9]
+[ext_resource path="res://Enemies/heli1.png" type="Texture" id=10]
+[ext_resource path="res://Enemies/heli4.png" type="Texture" id=11]
+[ext_resource path="res://Enemies/heli3.png" type="Texture" id=12]
+[ext_resource path="res://Enemies/Trooper1.png" type="Texture" id=13]
+[ext_resource path="res://Enemies/Trooper2.png" type="Texture" id=14]
+[ext_resource path="res://Enemies/bulky2.png" type="Texture" id=15]
+[ext_resource path="res://Enemies/bulky1.png" type="Texture" id=16]
+[ext_resource path="res://Enemies/jet4.png" type="Texture" id=17]
+[ext_resource path="res://Enemies/jet1.png" type="Texture" id=18]
+[ext_resource path="res://Enemies/jet3.png" type="Texture" id=19]
+[ext_resource path="res://Enemies/jet2.png" type="Texture" id=20]
+[ext_resource path="res://Enemies/Duper3.png" type="Texture" id=21]
+[ext_resource path="res://Enemies/boss1.png" type="Texture" id=22]
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 30.0
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 22 ) ],
+"loop": true,
+"name": "BOSS",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 16 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "BULKY",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 21 ) ],
+"loop": true,
+"name": "DUPPER",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 9 ), ExtResource( 12 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "HELI",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 18 ), ExtResource( 20 ), ExtResource( 19 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "JET",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "SWARMER",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "TROOPER",
+"speed": 5.0
+} ]
+
+[node name="EnemyFollow" type="PathFollow2D"]
+z_index = 2
+rotate = false
+cubic_interp = false
+loop = false
+script = ExtResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource( 3 )
+
+[node name="Layer" type="Node2D" parent="Area2D"]
+position = Vector2( -10, -22 )
+scale = Vector2( 4, 4 )
+z_index = 2
+
+[node name="HealthBar" type="TextureProgress" parent="Area2D/Layer"]
+margin_right = 5.0
+margin_bottom = 1.0
+value = 100.0
+texture_under = ExtResource( 7 )
+texture_progress = ExtResource( 8 )
+
+[node name="EnemyCollision" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 4 )
+
+[node name="EnemySprite" type="AnimatedSprite" parent="Area2D"]
+scale = Vector2( 4, 4 )
+frames = SubResource( 5 )
+animation = "DUPPER"
+playing = true

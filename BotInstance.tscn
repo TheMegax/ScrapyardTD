@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://BotInstance.gd" type="Script" id=1]
+[ext_resource path="res://Other/BotRun2.png" type="Texture" id=2]
+[ext_resource path="res://Other/BotFix1.png" type="Texture" id=3]
+[ext_resource path="res://Other/BotFix2.png" type="Texture" id=4]
+[ext_resource path="res://Other/BotRun1.png" type="Texture" id=5]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "FIX",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "RUN",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 20.0
+
+[node name="BotInstance" type="Area2D"]
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 5, 5 )
+frames = SubResource( 1 )
+animation = "FIX"
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 100
+shape = SubResource( 2 )
+
+[connection signal="area_entered" from="." to="." method="_on_BotInstance_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_BotInstance_area_exited"]

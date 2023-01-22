@@ -1,0 +1,120 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Towers/RedBase.png" type="Texture" id=1]
+[ext_resource path="res://Towers/PeashooterTurret-0.png" type="Texture" id=2]
+[ext_resource path="res://Shaders/offsetshadow.shader" type="Shader" id=3]
+[ext_resource path="res://TowerInstance.gd" type="Script" id=4]
+[ext_resource path="res://AreaCircle.gd" type="Script" id=5]
+[ext_resource path="res://Other/basic.wav" type="AudioStream" id=6]
+[ext_resource path="res://Other/circle_load.png" type="Texture" id=7]
+[ext_resource path="res://Other/health_under.png" type="Texture" id=8]
+[ext_resource path="res://Other/health_over.png" type="Texture" id=9]
+[ext_resource path="res://Font/Curse Casual.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://Gui/Scrap0.png" type="Texture" id=11]
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 5, 5 )
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 1.0
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource( 3 )
+shader_param/offset = Vector2( 1, 1 )
+shader_param/modulate = Color( 0.203922, 0.203922, 0.203922, 0.666667 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 26
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 10 )
+
+[node name="TowerInstance" type="Area2D"]
+z_index = 1
+script = ExtResource( 4 )
+
+[node name="Hitbox" type="Area2D" parent="."]
+scale = Vector2( 6, 6 )
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource( 4 )
+
+[node name="AreaCircle" type="CollisionShape2D" parent="."]
+z_index = 1
+shape = SubResource( 3 )
+script = ExtResource( 5 )
+
+[node name="SpriteBase" type="Sprite" parent="."]
+material = SubResource( 2 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 1 )
+
+[node name="SpriteTurret" type="Sprite" parent="."]
+scale = Vector2( 6, 6 )
+z_index = 1
+texture = ExtResource( 2 )
+offset = Vector2( 0, -2 )
+
+[node name="ShootSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+
+[node name="Layer" type="Node2D" parent="."]
+position = Vector2( -29, -53.6667 )
+scale = Vector2( 12, 6 )
+z_index = 40
+
+[node name="HealthBar" type="TextureProgress" parent="Layer"]
+margin_left = 0.0833333
+margin_top = 0.111112
+margin_right = 5.08333
+margin_bottom = 1.11111
+value = 100.0
+texture_under = ExtResource( 8 )
+texture_progress = ExtResource( 9 )
+
+[node name="Layer2" type="Node2D" parent="."]
+z_index = 3
+
+[node name="Container" type="HBoxContainer" parent="Layer2"]
+margin_left = -34.0
+margin_top = 39.0
+margin_right = 35.0
+margin_bottom = 76.0
+
+[node name="ScrapContainer" type="CenterContainer" parent="Layer2/Container"]
+margin_right = 25.0
+margin_bottom = 37.0
+
+[node name="TextureScrap" type="TextureRect" parent="Layer2/Container/ScrapContainer"]
+margin_top = 6.0
+margin_right = 25.0
+margin_bottom = 31.0
+rect_min_size = Vector2( 25, 25 )
+texture = ExtResource( 11 )
+expand = true
+stretch_mode = 5
+
+[node name="ScrapLabel" type="Label" parent="Layer2/Container"]
+margin_left = 29.0
+margin_top = 3.0
+margin_right = 29.0
+margin_bottom = 34.0
+custom_fonts/font = SubResource( 5 )
+
+[node name="Layer3" type="Node2D" parent="."]
+z_index = 2
+
+[node name="CircularProgress" type="TextureProgress" parent="Layer3"]
+margin_left = -25.8455
+margin_top = -25.8455
+margin_right = 2022.15
+margin_bottom = 2022.15
+rect_scale = Vector2( 0.03, 0.03 )
+rect_pivot_offset = Vector2( -5, -5 )
+texture_progress = ExtResource( 7 )
+fill_mode = 4
+
+[connection signal="area_entered" from="." to="." method="_on_TowerInstance_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_TowerInstance_area_exited"]
