@@ -1,0 +1,29 @@
+[
+	{
+		"name": "PEASHOOTER",
+		"level": 0,
+		"area": 230.0,
+		"building_price": 350,
+		"projectile" :
+            {
+                "type": "BASIC",
+                "quantity": 1,
+                "speed": 300,
+                "random_spread": 15.0,
+                "damage": 10,
+                "pierce": 1,
+                "max_age": 2,
+                "area": 12,
+				"scale": 4,
+                "offset_units": 48
+            },
+		"placement_type": "GROUND",
+		"attack_speed": 0.08,
+		"max_health": 200,
+		"heating_rate": 0.7,
+		"maintenance_rate": 8,
+		"building_time": 4.0,
+		"should_look_at_target": true,
+		"turret_offset": 0.0
+	}
+]

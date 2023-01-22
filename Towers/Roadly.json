@@ -1,0 +1,29 @@
+[
+	{
+		"name": "ROADLY",
+		"level": 0,
+		"area": 50.0,
+		"building_price": 80,
+		"projectile" :
+            {
+                "type": "AREA",
+                "quantity": 1,
+                "speed": 0,
+                "random_spread": 0.0,
+                "damage": 4,
+                "pierce": 2,
+                "max_age": 0.1,
+                "area": 50,
+				"scale": 1,
+                "offset_units": 0
+            },
+		"placement_type": "ROAD",
+		"attack_speed": 0.25,
+		"max_health": 70,
+		"heating_rate": 2,
+		"maintenance_rate": 1.5,
+		"building_time": 4.0,
+		"should_look_at_target": false,
+		"turret_offset": 0.0
+	}
+]

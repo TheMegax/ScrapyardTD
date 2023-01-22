@@ -1,0 +1,29 @@
+[
+	{
+		"name": "BOOMERANG",
+		"level": 0,
+		"area": 200.0,
+		"building_price": 170,
+		"projectile" :
+            {
+                "type": "BOOMERANG",
+                "quantity": 1,
+                "speed": 250,
+                "random_spread": 2.0,
+                "damage": 10,
+                "pierce": 6,
+                "max_age": 2.5,
+                "area": 12,
+				"scale": 4,
+                "offset_units": 48
+            },
+		"placement_type": "GROUND",
+		"attack_speed": 1.4,
+		"max_health": 120,
+		"heating_rate": 0.7,
+		"maintenance_rate": 2,
+		"building_time": 7.0,
+		"should_look_at_target": true,
+		"turret_offset": 0
+	}
+]

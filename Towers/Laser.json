@@ -1,0 +1,29 @@
+[
+	{
+		"name": "LASER",
+		"level": 0,
+		"area": 400.0,
+		"building_price": 400,
+		"projectile" :
+            {
+                "type": "LASER",
+                "quantity": 2,
+                "speed": 600,
+                "random_spread": 8.0,
+                "damage": 8,
+                "pierce": 5,
+                "max_age": 5,
+                "area": 12,
+				"scale": 6,
+                "offset_units": 48
+            },
+		"placement_type": "GROUND",
+		"attack_speed": 0.5,
+		"max_health": 160,
+		"heating_rate": 0.7,
+		"maintenance_rate": 4,
+		"building_time": 10.0,
+		"should_look_at_target": true,
+		"turret_offset": 0
+	}
+]

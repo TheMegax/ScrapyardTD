@@ -1,0 +1,42 @@
+[
+	{
+		"name": "PEASHOOTER",
+		"price": 50,
+	},
+	{
+		"name": "ROADLY",
+		"price": 80,
+	},
+	{
+		"name": "SPINSTER",
+		"price": 100,
+	},
+	{
+		"name": "SLASHER",
+		"price": 120,
+	},
+	{
+		"name": "BOOMERANG",
+		"price": 170,
+	},
+	{
+		"name": "SNIPER",
+		"price": 200,
+	},
+	{
+		"name": "SHOTGUN",
+		"price": 230,
+	},
+	{
+		"name": "HOMING",
+		"price": 270,
+	},
+	{
+		"name": "MINIGUN",
+		"price": 350,
+	},
+		{
+		"name": "LASER",
+		"price": 400,
+	}
+]

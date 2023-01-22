@@ -1,0 +1,29 @@
+[
+	{
+		"name": "SPINSTER",
+		"level": 0,
+		"area": 170.0,
+		"building_price": 100,
+		"projectile" :
+            {
+                "type": "BASIC",
+                "quantity": 4,
+                "speed": 40,
+                "random_spread": 0.0,
+                "damage": 2.5,
+                "pierce": 6,
+                "max_age": 3,
+                "area": 12,
+				"scale": 6,
+                "offset_units": 48
+            },
+		"placement_type": "GROUND",
+		"attack_speed": 0.5,
+		"max_health": 80,
+		"heating_rate": 0.7,
+		"maintenance_rate": 1.5,
+		"building_time": 5.0,
+		"should_look_at_target": false,
+		"turret_offset": 0
+	}
+]

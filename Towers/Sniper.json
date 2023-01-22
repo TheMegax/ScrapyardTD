@@ -1,0 +1,29 @@
+[
+	{
+		"name": "SNIPER",
+		"level": 0,
+		"area": 480.0,
+		"building_price": 200,
+		"projectile" :
+            {
+                "type": "SNIPE",
+                "quantity": 1,
+                "speed": 2400,
+                "random_spread": 0.0,
+                "damage": 40,
+                "pierce": 1,
+                "max_age": 2,
+                "area": 6,
+				"scale": 4,
+                "offset_units": 48
+            },
+		"placement_type": "GROUND",
+		"attack_speed": 2,
+		"max_health": 100,
+		"heating_rate": 5,
+		"maintenance_rate": 1.5,
+		"building_time": 8.0,
+		"should_look_at_target": true,
+		"turret_offset": 0.0
+	}
+]
